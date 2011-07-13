@@ -1,3 +1,9 @@
 Q. List all authors for a project?
 A. git log --format="%an" | sort -u
 
+Q. Delete the last commit?
+A. Dont do this if you pushed changes
+   git reset --hard HEAD~1
+   [use --soft to keep the files in stage]
+or
+   git reset --hard <sha1-commit-id>
