@@ -7,3 +7,9 @@ A. Dont do this if you pushed changes
    [use --soft to keep the files in stage]
 or
    git reset --hard <sha1-commit-id>
+
+Q. How do I clone all remote branches with Git?
+A. Quick look
+   git checkout origin/experimental
+To work on branch
+   git checkout -b experimental origin/experimental
