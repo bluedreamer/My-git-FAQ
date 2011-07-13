@@ -1,0 +1,3 @@
+Q. List all authors for a project?
+A. git log --format="%an" | sort -u
+
