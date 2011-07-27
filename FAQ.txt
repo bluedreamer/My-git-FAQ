@@ -13,3 +13,6 @@ A. Quick look
    git checkout origin/experimental
 To work on branch
    git checkout -b experimental origin/experimental
+
+Q. How do I make git clone checkout LF instead of CRLF on a windows box
+A. Edit config on windows box and set core.autocrlf=input in either --system or --global config
