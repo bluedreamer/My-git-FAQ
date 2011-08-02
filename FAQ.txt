@@ -16,3 +16,11 @@ To work on branch
 
 Q. How do I make git clone checkout LF instead of CRLF on a windows box
 A. Edit config on windows box and set core.autocrlf=input in either --system or --global config
+
+Q. How to add colour
+A. git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+
+Q. How to stop git tracking a file but keep the file
+A. git rm --cached <filename>
