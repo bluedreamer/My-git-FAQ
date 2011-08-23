@@ -24,3 +24,6 @@ git config --global color.branch auto
 
 Q. How to stop git tracking a file but keep the file
 A. git rm --cached <filename>
+
+Q. How to make existing branch track a remote branch
+A. git branch --set-upstream foo remote/foo
