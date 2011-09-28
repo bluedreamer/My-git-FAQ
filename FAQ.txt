@@ -27,3 +27,34 @@ A. git rm --cached <filename>
 
 Q. How to make existing branch track a remote branch
 A. git branch --set-upstream foo remote/foo
+
+Q. How to split a repo
+
+You want to clone your repository and then use git filter-branch to mark everything but the subdirectory you want in your new repo to be garbage-collected. To clone your local repository:
+
+ $ git clone --no-hardlinks /XYZ /ABC
+
+ The --no-hardlinks switch makes git use real file copies instead of hardlinking when cloning a local repository. The garbage collection and pruning actions will only work on blobs (file contents), not links.
+
+ Then just filter-branch and reset to exclude the other files, so they can be pruned:
+
+  $ git filter-branch --subdirectory-filter ABC HEAD
+   $ git reset --hard
+    $ git gc --aggressive
+     $ git prune
+
+     and now you have a local git repository of the ABC sub-directory with all its history preserved.
+
+     EDIT -- For most uses, git filter-branch should have the added parameter -- --all. (Yes that's really dash dash space dash dash all. This needs to be the last parameters for the command.) As Matli discovered, this keeps the project branches and tags included in the the new repo.
+
+
+Q. How do I find the commit that deleted a know file
+A. git rev-list -n 1 HEAD -- <file path>
+
+Q. How do I restore that deleted file now
+A. git checkout <deleting_commit>^ -- <file path>
+
+Q. How do I browse files that were deleted at some point in time (not knowing file name)
+A. git log --diff-filter=D --summary
+
+
