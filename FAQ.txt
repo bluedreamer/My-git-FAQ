@@ -24,3 +24,9 @@ git config --global color.branch auto
 
 Q. How to stop git tracking a file but keep the file
 A. git rm --cached <filename>
+
+Q. Restore a file previously delete
+A. Find the commit that deleted the file
+git rev-list -n 1 HEAD -- <filename>
+Git the file from previous commit
+git checkout <delete commit>^ -- <filename>
