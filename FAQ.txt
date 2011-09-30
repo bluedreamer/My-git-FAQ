@@ -63,3 +63,10 @@ Q. How do I delete a remote branch
 A. git push origin :<branch name>
 NB Dont forget to delete local
 git branch -d <branch name>
+
+Q. How do I delete a remote tag
+A. git push origin :<tag name>
+
+Q. Is that branch included in my branch
+A. git log <my branch>..<branch to test>
+ie. git log master..fix_101_br
