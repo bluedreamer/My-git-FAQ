@@ -70,3 +70,6 @@ A. git push origin :<tag name>
 Q. Is that branch included in my branch
 A. git log <my branch>..<branch to test>
 ie. git log master..fix_101_br
+
+Q. I deleted remote branches by my local copy still thinks the remote branches are there
+A. git remote prune origin
