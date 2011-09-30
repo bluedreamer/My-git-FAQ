@@ -58,3 +58,8 @@ A. git log --diff-filter=D --summary
 
 Q. How do I show file renames with full history
 A. git log --follow <filename>
+
+Q. How do I delete a remote branch
+A. git push origin :<branch name>
+NB Dont forget to delete local
+git branch -d <branch name>
