@@ -73,3 +73,6 @@ ie. git log master..fix_101_br
 
 Q. I checkout out a tag and am in a headless state - how do I find out which tag it was
 A. git describe --tags
+
+Q. I deleted remote branches by my local copy still thinks the remote branches are there
+A. git remote prune origin
