@@ -70,3 +70,6 @@ A. git push origin :<tag name>
 Q. Is that branch included in my branch
 A. git log <my branch>..<branch to test>
 ie. git log master..fix_101_br
+
+Q. I checkout out a tag and am in a headless state - how do I find out which tag it was
+A. git describe --tags
