@@ -76,3 +76,6 @@ A. git describe --tags
 
 Q. I deleted remote branches by my local copy still thinks the remote branches are there
 A. git remote prune origin
+
+Q. How to get the name of the branch you are on for use in code
+A. git name-rev --name-only HEAD
